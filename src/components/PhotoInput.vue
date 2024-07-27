@@ -55,15 +55,15 @@ const toggleFullScaleImage = () => {
         <label for="fileInput" class="relative cursor-pointer">
             <!-- insert profile photo over of svg -->
             <div v-if="imagePreviewUrl" class="preview">
-                <img :src="imagePreviewUrl" alt="Image Preview" class="absolute rounded-full object-cover w-[100px] h-[100px]" />
+                <img :src="imagePreviewUrl" alt="Image Preview" class="object-cover rounded-full w-[100px] h-[100px]" />
             </div>
-            <!-- default svg icon TODO v-else instead of overlaying with absolut-->
-            <svg viewBox="-3.6 -3.6 31.20 31.20" fill="none" class="w-[100px] h-[100px]">
+            <!-- default svg icon -->
+            <svg v-else viewBox="-3.6 -3.6 31.20 31.20" fill="none" class="w-[100px] h-[100px]">
                 <rect x="-3.6" y="-3.6" width="31.20" height="31.20" rx="15.6" fill="#d1d5db" ></rect>
                 <path d="M12.1992 12C14.9606 12 17.1992 9.76142 17.1992 7C17.1992 4.23858 14.9606 2 12.1992 2C9.43779 2 7.19922 4.23858 7.19922 7C7.19922 9.76142 9.43779 12 12.1992 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 <path d="M3 22C3.57038 20.0332 4.74796 18.2971 6.3644 17.0399C7.98083 15.7827 9.95335 15.0687 12 15C16.12 15 19.63 17.91 21 22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-            <!-- small clickable svg icon below TODO remake with peer instead of usual hover: -->
+            <!-- small clickable svg icon below -->
           <div
               class="absolute bottom-[-10px] left-[50%] translate-x-[-50%] flex justify-center items-center bg-[#d1d5db] hover:bg-gray-400 transition duration-75 p-1 w-[32px] h-[32px] rounded-full"
           >
